@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ merk.naam }} heeft de volgende auto's{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1> {{ merk.naam }}</h1>
+        <div class="container-fluid">
+            {% for auto in autos %}
+                <a href="/car/{{ auto.id }}" class="list-group-item">{{ auto.naam }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

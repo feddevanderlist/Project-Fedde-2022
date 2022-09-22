@@ -49,6 +49,9 @@ class Car
     #[ORM\JoinColumn(nullable: false)]
     private ?Motor $motor = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $naam = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -182,6 +185,18 @@ class Car
     public function setMotor(?Motor $motor): self
     {
         $this->motor = $motor;
+
+        return $this;
+    }
+
+    public function getNaam(): ?string
+    {
+        return $this->naam;
+    }
+
+    public function setNaam(string $naam): self
+    {
+        $this->naam = $naam;
 
         return $this;
     }

@@ -19,4 +19,14 @@ class MerkController extends AbstractController
             'merken' => $merken
         ]);
     }
+
+    #[Route('/merk/{id}', name: 'merk')]
+    public function getMerk($id, ManagerRegistry $doctrine): Response
+    {
+        $merk = $doctrine->getRepository(Merk::class)->find($id);
+        $autos = $merk->getAutos();
+
+        return $this->render('merk/merk.html.twig', ['controller_name' => 'MerkController', 'merk' => $merk, 'autos' => $autos]);
+
+    }
 }
