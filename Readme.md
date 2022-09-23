@@ -13,3 +13,6 @@ Vervang deze regel in de
 Nu zou de webserver gestart moeten zijn.
 
 - In de migrations folder staan de sql import scripts zodat je gelijk wat data hebt om mee te werken.
+- Wanneer je deze wil inserten sluit de webserver af
+- Daarna voer je een `npm install` gevolgd door `npm run watch` uit
+- Start je de server weer met `symfony server:start`
