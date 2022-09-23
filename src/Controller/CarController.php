@@ -28,7 +28,7 @@ class CarController extends AbstractController
         $motor = $car->getMotor();
         $merk = $car->getMerk();
 
-        return $this->render('car/car.html.twig', ['controller_name' => 'CarController', 'car' => $car, 'motor' => $motor, 'mer' => $merk]);
+        return $this->render('car/car.html.twig', ['controller_name' => 'CarController', 'car' => $car, 'motor' => $motor, 'merk' => $merk]);
 
     }
 }

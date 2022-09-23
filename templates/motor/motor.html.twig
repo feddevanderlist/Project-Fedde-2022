@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ motor.naam }} heeft de volgende specificaties{% endblock %}
+
+{% block body %}
+    <div class="container text-center">
+        <div class="row row-cols-2">
+            <div class="col">
+                <h2>{{ motor.naam }}</h2>
+                <ul>
+                    <li>
+                        Het vermogen is: {{ motor.vermogen }} PK
+                    </li>
+                    <li>
+                        Het aantal Cylinders is: {{ motor.aantalCylinders }}
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>De volgende auto's maken gebruik van deze motor</h2>
+                <div class="list-group list-group-horizontal">
+
+                    {% for auto in autos %}
+                        <a href="/merk/{{ auto.id }}" class="list-group-item">{{ auto.naam }}</a>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

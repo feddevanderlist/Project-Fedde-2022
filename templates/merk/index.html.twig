@@ -3,11 +3,30 @@
 {% block title %}Merk overzicht{% endblock %}
 
 {% block body %}
-    <div class="list-group list-group-horizontal">
-
-        {% for merk in merken %}
-            <a href="/merk/{{ merk.id }}" class="list-group-item">{{ merk.naam }}</a>
-        {% endfor %}
-
+    <div class="list-group">
+        <div class="container-fluid text-center">
+            <div class="row align-items-start">
+                {% for i in 0.. merken|length/3 %}
+                    <div class="col">
+                        <a href="/merk/{{ merken[i].id }}" class="list-group-item">{{ merken[i].naam }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row align-items-center">
+                {% for i in merken|length/3+1..(merken|length/3)*2+1 %}
+                    <div class="col">
+                        <a href="/merk/{{ merken[i].id }}" class="list-group-item">{{ merken[i].naam }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row align-items-end">
+                {% for i in merken|length/3*2+1..merken|length %}
+                    <div class="col">
+                        <a href="/merk/{{ merken[i].id }}" class="list-group-item">{{ merken[i].naam }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
+
 {% endblock %}

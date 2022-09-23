@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ car.naam }} heeft de volgende specificaties{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ car.naam }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"><a href="/merk/{{ car.merk.id }}"
+                                                             class="list-group-item">{{ car.merk.naam }}</a></h6>
+                <ul>
+                    <li>Kleur: {{ car.kleur }} </li>
+                    <li>Gewicht: {{ car.gewicht }} kg</li>
+                    <li>Brandstof: {{ car.brandstof }} </li>
+                    <li>Top snelheid: {{ car.topSnelHeid }} km/h</li>
+                    <li>Bouwjaar: {{ car.bouwjaar|date("m/d/Y") }} </li>
+                    <li>Automaat: {{ car.automaat }} </li>
+                    <li>Aantal versnellingen: {{ car.aantalVersnellingen }} </li>
+                    <li>Prijs: {{ car.prijs }} </li>
+                    <li>Motor: <a href="/motor/{{ car.motor.id }}" class="list-group-item">{{ car.motor.naam }}</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

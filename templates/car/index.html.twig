@@ -3,10 +3,11 @@
 {% block title %}Auto overzicht{% endblock %}
 
 {% block body %}
+    <h2>De volgende auto's zijn bij ons bekend: </h2>
     <div class="list-group list-group-horizontal">
 
         {% for auto in autos %}
-            <a href="/merk/{{ auto.id }}" class="list-group-item">{{ auto.naam }}</a>
+            <a href="/car/{{ auto.id }}" class="list-group-item">{{ auto.naam }}</a>
         {% endfor %}
 
     </div>

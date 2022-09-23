@@ -25,7 +25,7 @@ class MotorController extends AbstractController
     public function getMotor($id, ManagerRegistry $doctrine): Response
     {
         $motor = $doctrine->getRepository(Motor::class)->find($id);
-        $autos = $motor->getAutos();
+        $autos = $motor->getCar();
 
         return $this->render('motor/motor.html.twig', ['controller_name' => 'MotorController', 'motor' => $motor, 'autos'=>$autos]);
 
