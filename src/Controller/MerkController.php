@@ -13,7 +13,8 @@ class MerkController extends AbstractController
     #[Route('/', name: 'app_merk')]
     public function index(ManagerRegistry $doctrine): Response
     {
-        $merken = $doctrine->getRepository(Merk::class)->findAll();
+        $merken = $doctrine->getRepository(Merk::class)->findBy(array(),array('naam'=>'ASC'));
+
         return $this->render('merk/index.html.twig', [
             'controller_name' => 'MerkController',
             'merken' => $merken
