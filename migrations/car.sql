@@ -39,36 +39,6 @@ INSERT INTO `car` (`id`, `merk_id`, `motor_id`, `kleur`, `gewicht`, `brandstof`,
 -- Indexes for dumped tables
 --
 
---
--- Indexes for table `car`
---
-ALTER TABLE `car`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `IDX_773DE69DD901B33D` (`merk_id`),
-  ADD KEY `IDX_773DE69D80D58D71` (`motor_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `car`
---
-ALTER TABLE `car`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `car`
---
-ALTER TABLE `car`
-  ADD CONSTRAINT `FK_773DE69D80D58D71` FOREIGN KEY (`motor_id`) REFERENCES `motor` (`id`),
-  ADD CONSTRAINT `FK_773DE69DD901B33D` FOREIGN KEY (`merk_id`) REFERENCES `merk` (`id`);
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

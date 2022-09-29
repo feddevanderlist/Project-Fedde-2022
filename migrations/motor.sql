@@ -35,22 +35,7 @@ INSERT INTO `motor` (`id`, `naam`, `vermogen`, `aantal_cylinders`) VALUES
 -- Indexes for dumped tables
 --
 
---
--- Indexes for table `motor`
---
-ALTER TABLE `motor`
-  ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `motor`
---
-ALTER TABLE `motor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
