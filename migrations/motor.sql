@@ -22,18 +22,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `motor`
---
-
-CREATE TABLE `motor` (
-  `id` int(11) NOT NULL,
-  `naam` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vermogen` int(11) NOT NULL,
-  `aantal_cylinders` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 --
 -- Dumping data for table `motor`
 --

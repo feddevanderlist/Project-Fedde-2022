@@ -23,25 +23,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `car`
---
-
-CREATE TABLE `car` (
-  `id` int(11) NOT NULL,
-  `merk_id` int(11) NOT NULL,
-  `motor_id` int(11) NOT NULL,
-  `kleur` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gewicht` int(11) NOT NULL,
-  `brandstof` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `top_snel_heid` int(11) NOT NULL,
-  `bouwjaar` date NOT NULL,
-  `automaat` tinyint(1) NOT NULL,
-  `aantal_versnellingen` int(11) NOT NULL,
-  `aantal_deuren` int(11) NOT NULL,
-  `prijs` int(11) NOT NULL,
-  `naam` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `car`
