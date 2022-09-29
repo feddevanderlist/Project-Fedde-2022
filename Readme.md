@@ -9,6 +9,7 @@ Vervang deze regel in de
 .env `DATABASE_URL="mysql://username:password@127.0.0.1:3306/project-fedde-2020?serverVersion=8&charset=utf8mb4"`
 - `php bin/console doctrine:database:create`
 - `php bin/console doctrine:migrations:migrate`
+- `npm run dev`
 - voer deze functie uit `symfony server:start`
 
 Nu zou de webserver gestart moeten zijn.
